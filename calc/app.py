@@ -5,13 +5,17 @@ app = Flask(__name__)
 # Put your app in here.
 
 @app.route('/add')
-operations.add(request.args['a'],request.args['b'])
+def add_oper():
+    operations.add(request.args['a'],request.args['b'])
 
 @app.route('/sub')
-operations.sub(request.args['a'],request.args['b'])
+def sub_oper():
+    operations.sub(request.args['a'],request.args['b'])
 
 @app.route('/mult')
-operations.mult(request.args['a'],request.args['b'])
+def mult_oper():
+    operations.mult(request.args['a'],request.args['b'])
 
 @app.route('/div')
-operations.div(request.args['a'],request.args['b'])
+def div_oper():
+    operations.div(request.args['a'],request.args['b'])
